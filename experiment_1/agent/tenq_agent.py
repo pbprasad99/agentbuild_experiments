@@ -9,6 +9,7 @@ from langchain_core.messages import HumanMessage
 #load env variable for API keys
 from dotenv import load_dotenv
 import os
+import pathlib
 load_dotenv()  # reads .env into os.environ
 # Load Gemini API key from environment (should be set in .env)
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
@@ -25,7 +26,11 @@ def get_xbrl_data(xbrl_path):
 
 if __name__ == "__main__":
     #remove hardcoding
-    xbrl_file = "hims-20250331_htm.xml"
+    xbrl_file = "../data/hims-20250331_htm.xml"
+    # Use pathlib to construct a relative path to the XBRL file
+    base_dir = pathlib.Path(__file__).parent
+    xbrl_file = base_dir / "../data/hims-20250331_htm.xml"
+    xbrl_file = xbrl_file.resolve()
     ticker = "HIMS"
     xbrl_data = get_xbrl_data(xbrl_file)
     prompt = ChatPromptTemplate.from_messages([
