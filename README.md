@@ -1,3 +1,3 @@
 ##  About
 
-Challenges from https://agentbuild.ai/
+Trying out stuff
