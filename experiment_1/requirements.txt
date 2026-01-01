@@ -1,5 +1,0 @@
-langchain
-langchain-google-genai
-python-dotenv
-# Optional: for XBRL/XML parsing
-xmltodict
