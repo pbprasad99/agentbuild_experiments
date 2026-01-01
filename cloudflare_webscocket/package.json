@@ -1,0 +1,26 @@
+{
+  "name": "cloudflare-websocket-sec",
+  "version": "1.0.0",
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20231218.0",
+    "typescript": "^5.0.0",
+    "wrangler": "^4.54.0"
+  },
+  "dependencies": {
+    "ws": "^8.14.2",
+    "node-fetch": "^3.3.2"
+  },
+  "private": true,
+  "scripts": {
+    "start": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "test": "node test-client.js",
+    "test:local": "node test-client.js --mode local",
+    "test:prod": "node test-client.js --mode production",
+    "simulate": "node simulate-data.js",
+    "simulate:local": "node simulate-data.js --mode local",
+    "simulate:prod": "node simulate-data.js --mode production",
+    "simulate:batch": "node simulate-data.js --mode local --batch",
+    "simulate:fast": "node simulate-data.js --mode local --rate 1000 --max 100"
+  }
+}
