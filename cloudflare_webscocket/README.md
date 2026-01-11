@@ -1,1 +1,3 @@
-Just learning to work with cloudflare primitives. The code is mostly AI slop.
+
+
+## Learning to work with Cloudflare Primitives 
